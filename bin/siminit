@@ -79,8 +79,8 @@ VALUES=$(dialog --clear --ascii-lines --backtitle "${TITLE}" \
 	--mixedform "${DBTYPE} database details:" 0 40 4 \
         "Database: " 1 1 "$DbDatabase"  1 10 20 0 0 \
 	"DB User : " 2 1 "$DbUser"      2 10 20 0 0 \
-	"DB Pass : " 3 1 ""             3 10 20 0 1 \
-	"\\Confirm: " 4 1 ""            4 10 20 0 1 \
+	"DB Pass : " 3 1 "$DbPassword"             3 10 20 0 0 \
+	"\\Confirm: " 4 1 "$DbPassword2"            4 10 20 0 0 \
 2>&1 1>&3)
 
 exec 3>&-
